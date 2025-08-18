@@ -21,6 +21,19 @@ class User:
         user_id = str(uuid.uuid4())
         return user_id
 
+    def update_profile(self, username=None, name=None, email=None, bio=None, profile_picture_url=None):
+        if username:
+            self.username = username
+
+        if name:
+            self.name = name
+        if email:
+            self.email = email
+        if bio:
+            self.bio = bio
+        if profile_picture_url:
+            self.profile_picture_url = profile_picture_url
+
     def __str__(self):
         return f"""
 User ID: {self.user_id}
