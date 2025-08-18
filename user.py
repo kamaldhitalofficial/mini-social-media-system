@@ -3,12 +3,14 @@ import uuid
 
 
 class User:
-    def __init__(self, username, name, email):
+    def __init__(self, username, name, email, bio, profile_picture_url):
         self.user_id = User.unique_id()
         self.username = username
         self.name = name
         self.email = email
         self.creation_time = User.creation_time()
+        self.bio = bio
+        self.profile_picture_url = profile_picture_url
 
     def creation_time():
         current_datetime = datetime.now()
