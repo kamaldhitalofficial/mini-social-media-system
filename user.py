@@ -34,11 +34,16 @@ class User:
         if profile_picture_url:
             self.profile_picture_url = profile_picture_url
 
-    def __str__(self):
+    def get_profile_info(self):
         return f"""
 User ID: {self.user_id}
 Username: {self.username}
 Name: {self.name}
 Email: {self.email}
-Creation Time: {self.creation_time}
+Bio: {self.bio}
+Profile Picture URL: {self.profile_picture_url}
+Account Created: {self.creation_time}
 """
+
+    def __str__(self):
+        return self.get_profile_info()
