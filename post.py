@@ -12,6 +12,8 @@ class Post:
         self.__like_count = 0
         self.__view_count = 0
 
+        author.posts.append(self)
+
 
     def get_post_id(self):
         return self.__post_id

@@ -5,6 +5,7 @@ import uuid
 class User:
     _usernames = set()
 
+
     def __init__(self, username, name, email, bio, profile_picture_url):
         if username in User._usernames:
             raise ValueError(f"Username '{username}' is already taken.")
@@ -18,6 +19,7 @@ class User:
         self.profile_picture_url = profile_picture_url
 
         User._usernames.add(username)
+        self.posts = []
 
     def creation_time():
         current_datetime = datetime.now()
