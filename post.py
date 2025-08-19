@@ -22,8 +22,17 @@ class Post:
 
 
         def get_content(self):
+            self._view_count += 1
             return self._content
 
 
         def get_timestamp(self):
             return self._timestamp
+
+
+        def like_post(self):
+            self._like_count += 1
+
+
+        def get_likes(self):
+            return self.like_count
