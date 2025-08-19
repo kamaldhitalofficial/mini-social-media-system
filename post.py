@@ -9,6 +9,8 @@ class Post:
         self.author = author
         self.content = content
         self._timestamp = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
+        self._like_count = 0
+        self._view_count = 0
 
 
         def get_post_id(self):
